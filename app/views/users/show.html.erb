@@ -1,0 +1,9 @@
+<h3><%= link_to "@#{@user.username}", user_path(@user.username) %></h3>
+
+<p>
+  <ul>
+  <% @user.statuses.each do |status| %>
+    <li><%= status.body %> on <%= status.created_at %></li>
+  <% end %>
+  </ul>
+</p>
